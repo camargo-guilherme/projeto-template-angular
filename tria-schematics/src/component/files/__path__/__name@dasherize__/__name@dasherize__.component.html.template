@@ -3,6 +3,7 @@
   [urlBtn]="'/<%= dasherize(name)%>-new'"
   [titleBtn]="'Novo <%= classify(name)%>'"
 ></app-header-page>
+
 <app-<%= dasherize(name)%>-table-grid>
   <div class="row">
     <div class="col-sm-12 col-md-8 col-lg-6">

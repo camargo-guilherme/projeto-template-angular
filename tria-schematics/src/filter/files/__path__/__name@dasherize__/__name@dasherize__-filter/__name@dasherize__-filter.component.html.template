@@ -4,7 +4,7 @@
         <div class="col-12">
           <div class="form-group">
             <label>Descrição</label>
-            <input formControlName="description" type="text" class="form-control" />
+            <input type="text" class="form-control" />
           </div>
         </div>
       </div>
@@ -17,7 +17,6 @@
               [items]="listStatus"
               bindLabel="description"
               bindValue="value"
-              formControlName="status"
             >
             </ng-select>
           </div>

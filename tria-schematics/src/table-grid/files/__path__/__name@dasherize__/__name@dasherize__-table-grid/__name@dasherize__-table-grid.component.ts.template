@@ -36,7 +36,7 @@ export class <%= classify(name)%>TableGridComponent {
   ) { }
 
   ngOnInit() {
-    if (!this.access.haveAccessModule("<%= dasherize(name)%>s")) return;
+    if (!this.access.haveAccessModule("<%= dasherize(name)%>")) return;
 
     this.resetFilter();
     this.getTableDataByPage(0);
