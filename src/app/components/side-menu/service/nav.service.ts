@@ -8,13 +8,12 @@ import { jwtDecode } from "jwt-decode";
 export class NavService {
   navModules: NavModule[] = [];
 
-  navItemsSoyProduction: NavItem[] = [];
-  navItemsSoyPreFound: NavItem[] = [];
+  navItemsRegisters: NavItem[] = [];
   navItemsSecurity: NavItem[] = [];
   navAccessModule: NavModule[] = [];
 
   constructor() {
-    if (this.navItemsSoyProduction.length === 0) {
+    if (this.navItemsRegisters.length === 0) {
       this.getNavModules();
     }
   }
@@ -22,9 +21,19 @@ export class NavService {
   getNavModules() {
     return (this.navModules = [
       {
+        label: 'Cadastros',
+        children: this.getNavItemsRegisters(),
+      },
+      {
         label: "Segurança",
         children: this.getNavItemsSecurity(),
       },
+    ]);
+  }
+
+  getNavItemsRegisters() {
+    return (this.navItemsRegisters = [
+
     ]);
   }
 

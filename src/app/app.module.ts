@@ -144,12 +144,6 @@ import { ProfileService } from "./pages/profile/service/profile.service";
     }),
   ],
   providers: [
-    NavService,
-    AuthenticationService,
-    GlobalValuesService,
-    UserService,
-    ProfileService,
-    HelpersService,
     AnalyzeModulePermission,
     HeadersInterceptorProvider,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
@@ -158,7 +152,13 @@ import { ProfileService } from "./pages/profile/service/profile.service";
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: LOCALE_ID, useValue: "pt-br" },
     { provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter },
-    provideEnvironmentNgxMask()
+    provideEnvironmentNgxMask(),
+    NavService,
+    AuthenticationService,
+    GlobalValuesService,
+    UserService,
+    ProfileService,
+    HelpersService,
   ],
   bootstrap: [AppComponent],
 })

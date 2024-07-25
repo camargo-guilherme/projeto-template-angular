@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "schematics:install": "yarn --cwd ./tria-schematics",
+    "schematics:build": "yarn --cwd ./tria-schematics build",
+    "schematics:link": "yarn link --cwd ./tria-schematics && yarn link tria-schematics"
   },
   "private": true,
   "dependencies": {
