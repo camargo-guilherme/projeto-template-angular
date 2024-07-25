@@ -12,6 +12,8 @@ import { ProfileNewEditComponent } from "./pages/profile/profile-new-edit/profil
 import { ForgotPasswordChangeComponent } from "./pages/login/forgot-password-change/forgot-password-change.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { FirstAccessComponent } from "./pages/first-access/first-access.component";
+import { CustomLayoutComponent } from "./pages/custom-layout/custom-layout.component";
+import { CustomLayoutNewEditComponent } from "./pages/custom-layout/custom-layout-new-edit/custom-layout-new-edit.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent, canActivate: [AuthGuard] },
@@ -45,6 +47,17 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: "forgot-password/:hash", component: ForgotPasswordChangeComponent },
+  { path: "custom-layout", component: CustomLayoutComponent, canActivate: [AuthGuard] },
+  {
+    path: "custom-layout-new",
+    component: CustomLayoutNewEditComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "custom-layout-edit/:id",
+    component: CustomLayoutNewEditComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 export const routing = RouterModule.forRoot(routes);

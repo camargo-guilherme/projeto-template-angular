@@ -33,7 +33,11 @@ export class NavService {
 
   getNavItemsRegisters() {
     return (this.navItemsRegisters = [
-
+      {
+        link: "/custom-layout",
+        label: "Layout Customizável",
+        value: "custom-layout",
+      },
     ]);
   }
 

@@ -51,6 +51,9 @@ import { HeaderPageComponent } from "./components/header-page/header-page.compon
 import { SideNavComponent } from "./components/side-menu/side-nav/side-nav.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { SideMenuComponent } from "./components/side-menu/side-menu.component";
+import { LayoutMenuComponent } from "./components/layouts-menu/layout-menu.component";
+import { LayoutColumnsService } from "./_service/layout-columns.service";
+import { ModalAddLayoutComponent } from "./components/modal-add-layout/modal-add-layout.component";
 import { NavService } from "./components/side-menu/service/nav.service";
 import { MatFileUploadComponent } from "./components/upload-material/mat-file-upload.component";
 import { ChangePasswordModalComponent } from "./components/change-password-modal/change-password-modal.component";
@@ -73,6 +76,11 @@ import { UserService } from "./pages/users/service/user.service";
 import { ForgotPasswordChangeComponent } from "./pages/login/forgot-password-change/forgot-password-change.component";
 import { ForgotPasswordComponent } from "./pages/login/forgot-password/forgot-password.component";
 import { ProfileService } from "./pages/profile/service/profile.service";
+import { CustomLayoutComponent } from './pages/custom-layout/custom-layout.component';
+import { CustomLayoutTableGridComponent } from './pages/custom-layout/custom-layout-table-grid/custom-layout-table-grid.component';
+import { CustomLayoutNewEditComponent } from './pages/custom-layout/custom-layout-new-edit/custom-layout-new-edit.component';
+import { CustomLayoutFilterComponent } from './pages/custom-layout/custom-layout-filter/custom-layout-filter.component';
+import { CustomLayoutService } from './pages/custom-layout/service/custom-layout.service';
 
 
 @NgModule({
@@ -90,6 +98,8 @@ import { ProfileService } from "./pages/profile/service/profile.service";
     UsersComponent,
     NavbarComponent,
     SideMenuComponent,
+    LayoutMenuComponent,
+    ModalAddLayoutComponent,
     UsersFilterComponent,
     UsersTableGridComponent,
     UsersNewEditComponent,
@@ -104,6 +114,10 @@ import { ProfileService } from "./pages/profile/service/profile.service";
     AccordionComponent,
     AddressComponent,
     TableGridGenericComponent,
+    CustomLayoutComponent,
+    CustomLayoutTableGridComponent,
+    CustomLayoutNewEditComponent,
+    CustomLayoutFilterComponent,
   ],
   imports: [
     CommonModule,
@@ -159,6 +173,8 @@ import { ProfileService } from "./pages/profile/service/profile.service";
     UserService,
     ProfileService,
     HelpersService,
+    LayoutColumnsService,
+    CustomLayoutService,
   ],
   bootstrap: [AppComponent],
 })
