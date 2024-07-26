@@ -88,6 +88,7 @@ Certifique-se de substituir `<nome-do-schematic>` pelo nome do schematic desejad
 
 Abaixo está a árvore de diretórios gerada pelo schematic `create-components`:
 
+```
 src/
 └── app/
 └── pages/
@@ -113,3 +114,4 @@ src/
 │ └── nova-tela-list.ts
 └── service/
 └── nova-tela.service.ts
+```
