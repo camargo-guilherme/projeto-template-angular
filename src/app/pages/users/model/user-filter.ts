@@ -5,7 +5,5 @@ export class UserFilter extends FilterBase {
     lastName?: string;
     email?: string;
     login?: string;
-    accessAllMultipliers?: boolean;
-    multiplierIds?: number[] = [];
     status?: boolean;
 }

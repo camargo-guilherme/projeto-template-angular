@@ -153,41 +153,6 @@
         </div>
       </div>
 
-      <div class="form-group" style="margin-top: 30px">
-        <h4>Acesso aos Multiplicadores</h4>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-2">
-              <div class="form-group">
-                <label>Acesso a todos os Muitplicadores?</label><br />
-                <mat-slide-toggle
-                  formControlName="allAccessMultipliers"
-                  (change)="accessAllMultipliers($event)"
-                >
-                </mat-slide-toggle>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-10">
-              <div class="form-group">
-                <label>Multiplicadores</label>
-                <ng-select
-                  placeholder="Selecione os Multiplicadores"
-                  [items]="lstMultipliers"
-                  bindLabel="description"
-                  bindValue="value"
-                  formControlName="multiplierIds"
-                  [multiple]="true"
-                  [closeOnSelect]="false"
-                  [loading]="loadingMultiplires"
-                  [readonly]="isAllAccessMultipliers"
-                >
-                </ng-select>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="buttons-form">
         <div class="row">
           <div class="col-sm-12 col-md-10 col-lg-10">

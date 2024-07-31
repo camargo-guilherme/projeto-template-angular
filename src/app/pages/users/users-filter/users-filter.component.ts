@@ -29,7 +29,7 @@ export class UsersFilterComponent {
   ];
 
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
   }
@@ -50,7 +50,6 @@ export class UsersFilterComponent {
       pageSize: 10,
       search: undefined,
       status: undefined,
-      multiplierIds: [],
     };
   }
 

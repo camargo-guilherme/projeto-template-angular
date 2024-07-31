@@ -33,8 +33,6 @@ export class UsersNewEditComponent {
     password: [null, Validators.required],
     passwordConfirmation: [null, Validators.required],
     profileId: [null, Validators.required],
-    multiplierIds: [null],
-    allAccessMultipliers: [false],
     firstAccess: [false],
   });
 
@@ -43,10 +41,7 @@ export class UsersNewEditComponent {
   id?: number;
   showPassword = false;
   showPasswordConfirmation = false;
-  loadingMultiplires: boolean = false;
-  lstMultipliers: SelectedDTO[] = [];
   lstProfiles: SelectedDTO[] = [];
-  isAllAccessMultipliers: boolean = false;
 
   constructor(
     private toastr: ToastrService,
@@ -100,14 +95,9 @@ export class UsersNewEditComponent {
     this.form.controls["lastName"].setValue(data.lastName);
     this.form.controls["email"].setValue(data.email);
     this.form.controls["profileId"].setValue(data.profileId);
-    this.form.controls["allAccessMultipliers"].setValue(
-      data.accessAllMultipliers
-    );
-    this.form.controls["multiplierIds"].setValue(data.multiplierIds);
     this.form.controls["createDate"].setValue(data.createDate);
     this.form.controls["password"].setValue(data.password);
     this.form.controls["firstAccess"].setValue(data.firstAccess);
-    this.isAllAccessMultipliers = data.accessAllMultipliers;
   }
 
   goToIndex() {
@@ -179,9 +169,6 @@ export class UsersNewEditComponent {
     model.lastName = this.form.controls["lastName"].value;
     model.email = this.form.controls["email"].value;
     model.login = this.form.controls["email"].value;
-    model.accessAllMultipliers =
-      this.form.controls["allAccessMultipliers"].value;
-    model.multiplierIds = this.form.controls["multiplierIds"].value;
     model.password = this.form.controls["password"].value;
     model.profileId = this.form.controls["profileId"].value;
 
@@ -191,11 +178,6 @@ export class UsersNewEditComponent {
   clearRequest() {
     this.sendform = false;
     this.global.setLoading(false);
-  }
-
-  accessAllMultipliers(event: MatSlideToggleChange) {
-    this.isAllAccessMultipliers = event.checked;
-    this.form.controls["multiplierIds"].setValue(null);
   }
 
   getProfiles() {

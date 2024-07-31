@@ -5,8 +5,6 @@ export class UserDTO {
   login: string = "";
   email: string = "";
   password: string = "";
-  accessAllMultipliers: boolean = false;
-  multiplierIds: number[] = [];
   createDate?: Date = undefined;
   profileId: number = 0;
   firstAccess: boolean = false;

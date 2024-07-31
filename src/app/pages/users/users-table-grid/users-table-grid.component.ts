@@ -45,7 +45,6 @@ export class UsersTableGridComponent {
       pageSize: this.itemsPerPageFixed,
       search: undefined,
       status: undefined,
-      multiplierIds: []
     };
   }
 
